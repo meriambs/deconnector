@@ -34,7 +34,7 @@ const Register = () => {
           <Formik
             initialValues={{
               email: '',
-              firstName: '',
+              name: '',
               lastName: '',
               password: '',
               policy: false
@@ -42,7 +42,7 @@ const Register = () => {
             validationSchema={
               Yup.object().shape({
                 email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
-                firstName: Yup.string().max(255).required('First name is required'),
+                name: Yup.string().max(255).required('First name is required'),
                 lastName: Yup.string().max(255).required('Last name is required'),
                 password: Yup.string().max(255).required('password is required'),
                 policy: Yup.boolean().oneOf([true], 'This field must be checked')
@@ -51,7 +51,7 @@ const Register = () => {
             onSubmit={async(values) => {
               const res = await axios.post('http://localhost:4150/users',{...values})
               console.log('register done', res);
-              navigate('/app/dashboard', { replace: true });
+              navigate('/login', { replace: true });
             }}
           >
             {({
@@ -80,15 +80,15 @@ const Register = () => {
                   </Typography>
                 </Box>
                 <TextField
-                  error={Boolean(touched.firstName && errors.firstName)}
+                  error={Boolean(touched.name && errors.name)}
                   fullWidth
-                  helperText={touched.firstName && errors.firstName}
+                  helperText={touched.name && errors.name}
                   label="First name"
                   margin="normal"
-                  name="firstName"
+                  name="name"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={values.firstName}
+                  value={values.name}
                   variant="outlined"
                 />
                 <TextField
