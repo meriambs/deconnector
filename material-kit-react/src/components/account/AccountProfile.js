@@ -118,7 +118,7 @@ const AccountProfile = ({ className, ...rest }) => {
         >
           <Avatar
             className={classes.avatar}
-            src={`http://localhost:3003/${user.photo}`}
+            src={`http://localhost:4150/${user.photo}`}
           />
           <Typography
             color="textPrimary"
