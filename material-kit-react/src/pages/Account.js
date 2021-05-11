@@ -26,7 +26,7 @@ const Account = () => {
   useEffect(() => {
     const fetchUser = async() => {
     if(!!token){
-     const dis = await axios.get('http://localhost:3003/users', {
+     const dis = await axios.get('http://localhost:4150/users', {
         headers: {"x-auth-token": token}
     }
     )

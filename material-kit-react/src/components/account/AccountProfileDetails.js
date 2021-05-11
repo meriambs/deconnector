@@ -229,7 +229,8 @@ const navigate = useNavigate();
  const updated  =()=>{
                             console.log('test direction');
 
-               navigate('/app/update-profil', { replace: true })
+               navigate('/app/update', { replace: true })
+               console.log('to the updatepage')
               
  }
 
@@ -323,7 +324,7 @@ const navigate = useNavigate();
                   // onBlur={handleBlur}
                   // onChange={handleChange}
                   // type="email"
-                  value={user.phoneNumber}
+                  value={user.phonenumber}
                   variant="outlined"
               />
             </Grid>
@@ -400,6 +401,7 @@ const navigate = useNavigate();
                     size="large"
                     type="submit"
                     variant="contained"
+                   
           >
             Change some details
           </Button>
