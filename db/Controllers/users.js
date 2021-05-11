@@ -16,8 +16,8 @@ const  uuid  = require('uuid').v4;
 //GET :  RETURN ALL USERS :
 
 const findUsers= async(req, res)=>{
-    // const returnUser = await Person.find({name:req.parms.name});
-    return res.send("returnUser")
+    const returnUser = await User.find({_id: req.user.user.id});
+    return res.send(returnUser)
 }
 
 
