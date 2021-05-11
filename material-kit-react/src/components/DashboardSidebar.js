@@ -22,12 +22,8 @@ import {
   Users as UsersIcon
 } from 'react-feather';
 import NavItem from './NavItem';
+import {useSelector} from 'react-redux';
 
-const user = {
-  avatar: '/static/images/avatars/avatar_6.png',
-  jobTitle: 'Senior Developer',
-  name: 'Katarina Smith'
-};
 
 const items = [
   {
@@ -74,7 +70,7 @@ const items = [
 
 const DashboardSidebar = ({ onMobileClose, openMobile }) => {
   const location = useLocation();
-
+ const user = useSelector((state =>state.user));
   useEffect(() => {
     if (openMobile && onMobileClose) {
       onMobileClose();
@@ -117,7 +113,7 @@ const DashboardSidebar = ({ onMobileClose, openMobile }) => {
           color="textSecondary"
           variant="body2"
         >
-          {user.jobTitle}
+          {user.lastName}
         </Typography>
       </Box>
       <Divider />
