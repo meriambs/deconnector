@@ -205,7 +205,7 @@ import {
 } from '@material-ui/core';
 import axios from 'axios';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
-import { useSnackbar } from 'notistack';
+// import { useSnackbar } from 'notistack';
 
 import  {useSelector} from 'react-redux';
 
@@ -216,7 +216,7 @@ const useStyles = makeStyles(() => ({
 
 const AccountProfileDetails = ({ className, ...rest }) => {
   const classes = useStyles();
-  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+  // const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   const user=useSelector((state =>state.user))
   console.log('user',user)
 
@@ -252,8 +252,9 @@ const navigate = useNavigate();
             }
             onSubmit={async (values)=>{
                const res = await axios.put(`http://localhost:4150/users/${user._id}`, values)
-               enqueueSnackbar('Profile updated', {variant:'success'});
+              //  enqueueSnackbar('Profile updated', {variant:'success'});
               console.log('testy')
+               navigate('/app/account', { replace: true })
               }
             }
    

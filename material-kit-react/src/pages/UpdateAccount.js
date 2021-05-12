@@ -7,8 +7,8 @@ import {
   Grid,
   makeStyles
 } from '@material-ui/core';
-import AccountUpdate from 'src/components/updateAccount/AccountUpdate';
-import AccountUpdateDetails from 'src/components/updateAccount/AccountUpdateDetails';
+import AccountUpda from 'src/components/updateAccount/AccountUpda';
+import AccountUpd from 'src/components/updateAccount/AccountUpd'
 
 
 
@@ -43,7 +43,7 @@ import AccountUpdateDetails from 'src/components/updateAccount/AccountUpdateDeta
               md={6}
               xs={12}
             >
-              <AccountUpdate />
+              <AccountUpda />
             </Grid>
             <Grid
               item
@@ -51,7 +51,7 @@ import AccountUpdateDetails from 'src/components/updateAccount/AccountUpdateDeta
               md={6}
               xs={12}
             >
-              <AccountUpdateDetails />
+              <AccountUpd/>
             </Grid>
           </Grid>
         </Container>

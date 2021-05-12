@@ -91,7 +91,7 @@ import {
   Typography,
   makeStyles
 } from '@material-ui/core';
-import { setuser } from "../../../src/redux/action";
+import { setuser } from "../../redux/action";
 import { useDispatch } from "react-redux";
 import  {useSelector} from 'react-redux';
 
@@ -124,12 +124,12 @@ const AccountUpdate = ({ className, ...rest }) => {
   /** end states */
 
   // Upload image
-  const upload = ({ target: { files } }) => {
-    let data = new FormData();
-    data.append('data', files[0]);
-    data.append('name', files[0].name);
-    setFormData(data);
-  };
+  // const upload = ({ target: { files } }) => {
+  //   let data = new FormData();
+  //   data.append('data', files[0]);
+  //   data.append('name', files[0].name);
+  //   setFormData(data);
+  // };
 
   // Submit Form
   const handleSubmit = async (e) => {
@@ -141,7 +141,7 @@ const AccountUpdate = ({ className, ...rest }) => {
     
     };
     
-       const res = await axios.post(`http://localhost:4150/users/photo`,formData,options);
+      //  const res = await axios.post(`http://localhost:4150/users/photo`,formData,options);
        const dis = await axios.get('http://localhost:4150/users', {
         headers: {"x-auth-token": token}
     }
@@ -172,8 +172,8 @@ const AccountUpdate = ({ className, ...rest }) => {
         <div  style={{position:'center'}}>
          <img
         className='mt-3'
-        src={`http://localhost:4150/${info.image}`}
-        alt={`${info.name}`}
+        // src={`http://localhost:4150/${info.image}`}
+        // alt={`${info.name}`}
         style={{ width: '150px',borderRadius:'60%' ,display: 'block',marginLeft: 'auto',marginRight:' auto'}}
       />
           <input
@@ -181,7 +181,7 @@ const AccountUpdate = ({ className, ...rest }) => {
             
             id='inputGroupFile04'
             aria-describedby='inputGroupFileAddon04'
-            onChange={upload}
+            // onChange={upload}
           />
           
         </div>

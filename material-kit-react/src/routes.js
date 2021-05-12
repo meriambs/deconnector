@@ -10,19 +10,20 @@ import NotFound from 'src/pages/NotFound';
 import ProductList from 'src/pages/ProductList';
 import Register from 'src/pages/Register';
 import Settings from 'src/pages/Settings';
-import UpdateAccount from "./pages/UpdateAccount";
+import UpdateAccount from "src/pages/UpdateAccount";
 
 const routes = [
   {
     path: 'app',
     element: <DashboardLayout />,
     children: [
+      { path: 'UpdateAccount', element: <UpdateAccount /> },
       { path: 'account', element: <Account /> },
       { path: 'customers', element: <CustomerList /> },
       { path: 'dashboard', element: <Dashboard /> },
       { path: 'products', element: <ProductList /> },
-      { path: 'settings', element: <Settings /> },
-      { path: 'profilupdate', element: <UpdateAccount/> },,
+      { path: 'test', element: <Settings /> },
+      
       { path: '*', element: <Navigate to="/404" /> }
     ]
   },
