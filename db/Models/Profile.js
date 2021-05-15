@@ -8,6 +8,12 @@ let profilSchema = new mongoose.Schema({
    type:mongoose.Schema.Types.ObjectId,
    ref:'user'
  },
+ phonenumber:Number,
+ age: Number,
+ password:{
+   type:String,
+   required:true
+ },
  company:{
    type:String,
  },

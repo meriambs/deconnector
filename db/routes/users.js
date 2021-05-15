@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const auth = require('../middleware/auth')
-const { createUser,findUsers} = require('../Controllers/users');
+const { createUser,findUsers,findandUpdate,deleteUser} = require('../Controllers/users');
 // ...rest of the initial code omitted for simplicity.
 
 //ramasser les fichiers 
@@ -16,10 +16,10 @@ router.post('/',createUser );
 
 // // update 
 
-// router.put('/:id',findandUpdate);
+router.put('/:id',findandUpdate);
 
 // //delete
 
-//  router.delete('/:id',deleteUser);
+  router.delete('/:id',deleteUser);
 
 module.exports = router;

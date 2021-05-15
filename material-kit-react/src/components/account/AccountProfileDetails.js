@@ -229,7 +229,7 @@ const navigate = useNavigate();
  const updated  =()=>{
                             console.log('test direction');
 
-               navigate('/app/update', { replace: true })
+               navigate('/app/test', { replace: true })
                console.log('to the updatepage')
               
  }
@@ -318,9 +318,9 @@ const navigate = useNavigate();
                 // error={Boolean(touched.email && errors.email)}
                   fullWidth
                   // helperText={touched.email && errors.email}
-                  label="phoneNumber"
+                  label="phonenumber"
                   margin="normal"
-                  name="phoneNumber"
+                  name="phonenumber"
                   // onBlur={handleBlur}
                   // onChange={handleChange}
                   // type="email"
@@ -339,11 +339,11 @@ const navigate = useNavigate();
                   // helperText={touched.email && errors.email}
                   label="adress"
                   margin="normal"
-                  name="adress"
+                  name="age"
                   // onBlur={handleBlur}
                   // onChange={handleChange}
-                  type="adress"
-                  value={user.adress}
+                  type="age"
+                  value={user.age}
                   variant="outlined"
               />
             </Grid>
@@ -352,38 +352,14 @@ const navigate = useNavigate();
               md={6}
               xs={12}
             >
-              <TextField
-                // error={Boolean(touched.email && errors.email)}
-                  fullWidth
-                  // helperText={touched.email && errors.email}
-                  label="githubLink"
-                  margin="normal"
-                  name="githubLink"
-                  // onBlur={handleBlur}
-                  // onChange={handleChange}
-                  type="githubLink"
-                  value={user.githubLink}
-                  variant="outlined"
-              />
+           
             </Grid>
               <Grid
               item
               md={6}
               xs={12}
             >
-              <TextField
-                // error={Boolean(touched.email && errors.email)}
-                  fullWidth
-                  // helperText={touched.email && errors.email}
-                  label="linkedin"
-                  margin="normal"
-                  name="linkedin"
-                  // onBlur={handleBlur}
-                  // onChange={handleChange}
-                  type="linkedin"
-                  value={user.linkedin}
-                  variant="outlined"
-              />
+           
             </Grid>
             
           </Grid>

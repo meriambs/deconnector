@@ -90,20 +90,21 @@ const createUser = async  (req, res) => {
 
 
    //PUT : EDIT A USER BY ID 
-// const findandUpdate = async ( req , res)=>{
-// const updatedPerson = await Person.findOneAndUpdate({_id:req.params.id},req.body,{new:true})
-// return res.send(updatedPerson)
-// }
+   const findandUpdate = async ( req , res)=>{
+    const updatedPerson = await User.findOneAndUpdate({_id:req.params.id},req.body,{new:true})
+    return res.send(updatedPerson)
+    }
 
 
   //   DELETE : REMOVE A USER BY ID 
-//   const deleteUser = async (req,res)=>{
-//     const deltedPerson = await Person.findByIdAndRemove({_id:req.params.id});
-//     return res.send(deltedPerson)
-// }
+  const deleteUser = async (req,res)=>{
+    const deltedPerson = await User.findByIdAndRemove({_id:req.params.id});
+    return res.send(deltedPerson)
+}
+
 module.exports = {
      findUsers,
    createUser,
-    // findandUpdate,
-    // deleteUser
+   findandUpdate,
+   deleteUser
 }
