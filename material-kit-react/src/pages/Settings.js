@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet';
 import { Box, Container,Grid } from '@material-ui/core';
 // import SettingsNotifications from 'src/components/settings/SettingsNotifications';
  import SettingsPassword from 'src/components/settings/SettingsPassword';
-import AccountProfile from 'src/components/account/AccountProfile';
+// import AccountProfile from 'src/components/account/AccountProfile';
 
 const SettingsView = () => (
   <>
@@ -27,7 +27,7 @@ const SettingsView = () => (
             md={6}
             xs={12}
           >
-            <AccountProfile />
+            <h1>test</h1>
           </Grid>
           <Grid
             item

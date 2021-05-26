@@ -94,7 +94,7 @@ const createUser = async  (req, res) => {
     const updatedPerson = await User.findOneAndUpdate({_id:req.params.id},req.body,{new:true})
     return res.send(updatedPerson)
     }
-
+   
 
   //   DELETE : REMOVE A USER BY ID 
   const deleteUser = async (req,res)=>{
